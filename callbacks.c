@@ -10,9 +10,9 @@ G_MODULE_EXPORT void on_main_window_destroy(GtkWidget *main_window)
 	gtk_main_quit();
 }
 
-/***********************
- *     MAIN WINDOW     *
- ***********************/
+//************************
+//     Main Dialog        
+//************************
 
  // display meaning when a word is selected from tree selection
 G_MODULE_EXPORT void on_changed_main(GtkTreeSelection *treeselection, ChData *data) {
@@ -30,8 +30,6 @@ G_MODULE_EXPORT void on_changed_main(GtkTreeSelection *treeselection, ChData *da
 	gtk_text_buffer_set_text(Buffer, "", -1); //set meaning text view to buffer
 	if (btsel(data->tree_word, word, meaning, sizeof(meaning), &rsize) == 0){
 		gtk_text_buffer_set_text(Buffer, meaning, -1);
-		printf("%s\n", word);
-		printf("===========\n");
 		
 	}
 	g_free(word);
@@ -99,7 +97,7 @@ G_MODULE_EXPORT void on_search_changed_entry_main (GtkSearchEntry *entry, ChData
 
 
 
-/* ABOUT button handler */
+/* HELP button handler */
 G_MODULE_EXPORT void on_btn_help_clicked_main(GtkButton *button, ChData *data)
 {
 		gtk_dialog_run(GTK_DIALOG(data->dlg_help));
@@ -166,9 +164,9 @@ G_MODULE_EXPORT void on_btn_delete_clicked_main(GtkButton *button, ChData *data)
 }
 
 
-/*************************
-*      ADD DIALOG        *
-**************************/
+//************************
+//     Add dialog        
+//************************
 
 /* CANCEL button handler */
  G_MODULE_EXPORT void on_btn_cancel_clicked_add(GtkButton *button, ChData *data)
@@ -212,9 +210,9 @@ G_MODULE_EXPORT void on_btn_add_clicked_add(GtkButton *button, ChData *data)
 	}
 	//g_free(word);
 }
-/*************************
-*      EDIT DIALOG       *
-**************************/
+//************************
+//    	Edit dialog       
+//************************
 
 /* Edit button handler */
 G_MODULE_EXPORT void on_btn_edit_clicked_edit(GtkButton *button, ChData *data)
@@ -260,9 +258,9 @@ G_MODULE_EXPORT void on_btn_edit_clicked_edit(GtkButton *button, ChData *data)
 	reset_textview(data->txt_meaning_edit);
  }
 
- /*************************
-*      DELETE DIALOG       *
-**************************/
+//************************
+//    	Delete Dialog        
+//************************
 
 /* Delete button handler */
 G_MODULE_EXPORT void on_btn_delete_clicked_delete(GtkButton *button, ChData *data)
@@ -305,9 +303,9 @@ G_MODULE_EXPORT void on_btn_delete_clicked_delete(GtkButton *button, ChData *dat
 	gtk_widget_hide(data->dlg_delete);
  }
 
-  /*************************
-*      DELETE DIALOG       *
-**************************/
+//************************
+//     Help dialog        
+//************************
  G_MODULE_EXPORT void on_btn_close_clicked_help(GtkButton *button, ChData *data)
  {
 	gtk_widget_hide(data->dlg_help);     

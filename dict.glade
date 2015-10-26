@@ -464,6 +464,7 @@ of Advanced datastructures and algorithms Course</property>
       <column type="gchararray"/>
     </columns>
   </object>
+  
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="default_width">685</property>
@@ -474,7 +475,7 @@ of Advanced datastructures and algorithms Course</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkButtonBox" id="btn_nav">
+          <object class="GtkButtonBox" id="btn_nav1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="halign">center</property>
@@ -482,6 +483,7 @@ of Advanced datastructures and algorithms Course</property>
             <property name="margin_left">2</property>
             <property name="margin_top">12</property>
             <property name="margin_bottom">8</property>
+            <property name="orientation">vertical</property>
             <property name="spacing">15</property>
             <property name="homogeneous">True</property>
             <property name="layout_style">center</property>
@@ -561,8 +563,8 @@ of Advanced datastructures and algorithms Course</property>
             </child>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
             <property name="width">1</property>
             <property name="height">1</property>
           </packing>
@@ -596,6 +598,7 @@ of Advanced datastructures and algorithms Course</property>
                 <property name="can_focus">True</property>
                 <child>
                   <object class="GtkScrolledWindow" id="result_container1">
+                    <property name="width_request">200</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="shadow_type">in</property>
@@ -604,14 +607,16 @@ of Advanced datastructures and algorithms Course</property>
                       <object class="GtkTreeView" id="tree_view_main1">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
                         <property name="model">list_store1</property>
                         <property name="headers_visible">False</property>
                         <property name="search_column">0</property>
                         <property name="level_indentation">1</property>
-                        <property name="enable_grid_lines">horizontal</property>
+                        <property name="tooltip_column">0</property>
                         <property name="activate_on_single_click">True</property>
                         <child internal-child="selection">
-                          <object class="GtkTreeSelection" id="treeview_selection1">
+                          <object class="GtkTreeSelection" id="treeview-selection">
                             <signal name="changed" handler="on_changed_main" swapped="no"/>
                           </object>
                         </child>
@@ -657,7 +662,7 @@ of Advanced datastructures and algorithms Course</property>
                         <property name="enable_grid_lines">horizontal</property>
                         <property name="activate_on_single_click">True</property>
                         <child internal-child="selection">
-                          <object class="GtkTreeSelection" id="treeview_selection2">
+                          <object class="GtkTreeSelection" id="treeview-selection6">
                             <signal name="changed" handler="on_changed_main" swapped="no"/>
                           </object>
                         </child>
@@ -681,7 +686,6 @@ of Advanced datastructures and algorithms Course</property>
                 </child>
                 <child type="tab">
                   <object class="GtkLabel" id="label2">
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">History</property>
                   </object>
@@ -699,8 +703,8 @@ of Advanced datastructures and algorithms Course</property>
             </child>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
+            <property name="left_attach">1</property>
+            <property name="top_attach">0</property>
             <property name="width">1</property>
             <property name="height">1</property>
           </packing>
@@ -724,49 +728,7 @@ of Advanced datastructures and algorithms Course</property>
             </child>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkImage" id="logo">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="pixbuf">dict.ico</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="app_name">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Demo Dictionary</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="group_name">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_top">6</property>
-            <property name="margin_bottom">5</property>
-            <property name="label" translatable="yes">ICT Corporation</property>
-            <property name="lines">0</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">0</property>
             <property name="width">1</property>
             <property name="height">1</property>
