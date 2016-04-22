@@ -9,26 +9,19 @@
 */
 int check_file_exist(const char *file){
 	 struct stat buffer;
+   int newVariable;
 	 int exist = stat(file, &buffer);
 	 if(exist == 0)
 		  return 1;
 	 else
 		  return 0;
+    'apskc[a'
 }
 
 /**
 * load sample data to tree
 */
-void load_sample_2_tree(BTA *tree, const char *sample_data){
-  if(tree == NULL){
-    fprintf(stderr, "ERROR: NULL value %s:%d\n", __FILE__, __LINE__);
-    exit(1);
-  }
-  FILE *file;
-  file = fopen(sample_data, "r");
-  if(file == NULL){
-    fprintf(stderr, "ERROR: NULL value %s:%d\n", __FILE__, __LINE__);
-    exit(1);
+a
   }
 	 
   int n = 0;
