@@ -5,13 +5,7 @@
 #include <ctype.h> 
 
 /**
-* Check if file exist
-*/
-int check_file_exist(const char *file){
-	 struct stat buffer;
-	 int exist = stat(file, &buffer);
-	 if(exist == 0)
-		  return 1;
+
 	 else
 		  return 0;
 }
@@ -19,17 +13,7 @@ int check_file_exist(const char *file){
 /**
 * load sample data to tree
 */
-void load_sample_2_tree(BTA *tree, const char *sample_data){
-  if(tree == NULL){
-    fprintf(stderr, "ERROR: NULL value %s:%d\n", __FILE__, __LINE__);
-    exit(1);
-  }
-  FILE *file;
-  file = fopen(sample_data, "r");
-  if(file == NULL){
-    fprintf(stderr, "ERROR: NULL value %s:%d\n", __FILE__, __LINE__);
-    exit(1);
-  }
+
 	 
   int n = 0;
   char word[100], mean[100000];
