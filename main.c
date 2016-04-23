@@ -59,13 +59,7 @@
      CH_GET_OBJECT(builder, list_store1, GTK_LIST_STORE, data);
      CH_GET_OBJECT(builder, list_store2, GTK_LIST_STORE, data);
 
-     CH_GET_OBJECT(builder, treeview_selection1, GTK_TREE_SELECTION, data);
-     CH_GET_OBJECT(builder, treeview_selection2, GTK_TREE_SELECTION, data);
-     /* Connect signals */
-     gtk_builder_connect_signals(builder, data);
-
-     /* Destroy builder, since we don't need it anymore */
-     g_object_unref(G_OBJECT(builder));
+ahoichaisochsaiocasiocasoicns
 
      /* Show window */
      gtk_widget_show(data -> main_window);
