@@ -13,11 +13,7 @@
      /* Get more objects to use */
 #undef GW
 
-     CH_GET_OBJECT(builder, list_store1, GTK_LIST_STORE, data);
-     CH_GET_OBJECT(builder, list_store2, GTK_LIST_STORE, data);
 
-     CH_GET_OBJECT(builder, treeview_selection1, GTK_TREE_SELECTION, data);
-     CH_GET_OBJECT(builder, treeview_selection2, GTK_TREE_SELECTION, data);
      /* Connect signals */
      gtk_builder_connect_signals(builder, data);
 
