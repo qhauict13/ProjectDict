@@ -1,18 +1,7 @@
 #include "support.h"
 #include "model.h"
 
-#define UI_FILE "dict.glade"
 
-int main(int argc, char** argv)
-{
-     ChData     *data;
-     GtkBuilder *builder;
-     GError     *error = NULL;
-     node *stack = NULL;
-
-     /* Init btree */
-     BTA *tree_word, *tree_soundex;
-     btinit();
 
      if(check_file_exist("dict_db"))
           tree_word = btopn("dict_db", 0, FALSE);
